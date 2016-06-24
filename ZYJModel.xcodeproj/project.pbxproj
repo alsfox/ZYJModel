@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		470DBDE891670D4D633535B9 /* Pods_ZYJModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55053BC1EE5CC0AA1DAA7D2F /* Pods_ZYJModel.framework */; };
+		D92EAC871D1045B400BE6E8B /* ZYJFMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EAC861D1045B400BE6E8B /* ZYJFMDB.swift */; };
+		D95370051D1034570020F5EE /* ZYJModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370041D1034570020F5EE /* ZYJModel.swift */; };
+		D9C6618C1D159E3F002E87EC /* ZYJModel+CreateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6618B1D159E3F002E87EC /* ZYJModel+CreateTable.swift */; };
+		D9C6618E1D15CBBA002E87EC /* ZYJModel+Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6618D1D15CBBA002E87EC /* ZYJModel+Select.swift */; };
+		DC29CA101D100E77003BC277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC29CA0C1D100E77003BC277 /* LaunchScreen.storyboard */; };
+		DC29CA111D100E77003BC277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC29CA0E1D100E77003BC277 /* Main.storyboard */; };
+		DC29CA2F1D101351003BC277 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC29CA2E1D101351003BC277 /* libsqlite3.0.tbd */; };
+		DC305A011D0FE57100E7C3B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC305A001D0FE57100E7C3B6 /* AppDelegate.swift */; };
+		DC305A031D0FE57100E7C3B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC305A021D0FE57100E7C3B6 /* ViewController.swift */; };
+		DC305A081D0FE57100E7C3B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC305A071D0FE57100E7C3B6 /* Assets.xcassets */; };
+		DC305A171D0FE6C000E7C3B6 /* ZYJManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC305A161D0FE6C000E7C3B6 /* ZYJManager.m */; };
+		DC305A1A1D0FE73A00E7C3B6 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC305A191D0FE73A00E7C3B6 /* NSObject+Extension.swift */; };
+		DC305A1C1D0FE8C000E7C3B6 /* ZYJIvar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC305A1B1D0FE8C000E7C3B6 /* ZYJIvar.swift */; };
+		DC6AD9621D11241F002824F7 /* ZYJModel+Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9611D11241F002824F7 /* ZYJModel+Insert.swift */; };
+		DC6AD9641D112820002824F7 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9631D112820002824F7 /* TestModel.swift */; };
+		DC6AD9711D112BB6002824F7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9671D112BB6002824F7 /* FMDatabase.m */; };
+		DC6AD9721D112BB6002824F7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9691D112BB6002824F7 /* FMDatabaseAdditions.m */; };
+		DC6AD9731D112BB6002824F7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD96B1D112BB6002824F7 /* FMDatabasePool.m */; };
+		DC6AD9741D112BB6002824F7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD96D1D112BB6002824F7 /* FMDatabaseQueue.m */; };
+		DC6AD9751D112BB6002824F7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9701D112BB6002824F7 /* FMResultSet.m */; };
+		DC6AD9771D1136E6002824F7 /* ZYJModel+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9761D1136E6002824F7 /* ZYJModel+Common.swift */; };
+		DC6AD9791D113C03002824F7 /* NSObject+NSArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9781D113C03002824F7 /* NSObject+NSArray.swift */; };
+		DC6AD97E1D11429F002824F7 /* NSObject+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD97D1D11429F002824F7 /* NSObject+JSON.swift */; };
+		DC6AD9851D114590002824F7 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9811D114590002824F7 /* NSObject+YYModel.m */; };
+		DC6AD9861D114590002824F7 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9831D114590002824F7 /* YYClassInfo.m */; };
+		DC6AD99E1D114653002824F7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC6AD9881D114653002824F7 /* Info.plist */; };
+		DC6AD99F1D114653002824F7 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD98B1D114653002824F7 /* MJExtensionConst.m */; };
+		DC6AD9A01D114653002824F7 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD98D1D114653002824F7 /* MJFoundation.m */; };
+		DC6AD9A11D114653002824F7 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD98F1D114653002824F7 /* MJProperty.m */; };
+		DC6AD9A21D114653002824F7 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9911D114653002824F7 /* MJPropertyKey.m */; };
+		DC6AD9A31D114653002824F7 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9931D114653002824F7 /* MJPropertyType.m */; };
+		DC6AD9A41D114653002824F7 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9951D114653002824F7 /* NSObject+MJClass.m */; };
+		DC6AD9A51D114653002824F7 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9971D114653002824F7 /* NSObject+MJCoding.m */; };
+		DC6AD9A61D114653002824F7 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9991D114653002824F7 /* NSObject+MJKeyValue.m */; };
+		DC6AD9A71D114653002824F7 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD99B1D114653002824F7 /* NSObject+MJProperty.m */; };
+		DC6AD9A81D114653002824F7 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD99D1D114653002824F7 /* NSString+MJExtension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		155A005D913822994606B67E /* Pods-ZYJModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYJModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYJModel/Pods-ZYJModel.debug.xcconfig"; sourceTree = "<group>"; };
+		55053BC1EE5CC0AA1DAA7D2F /* Pods_ZYJModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYJModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		694665BC9339B4F7BAD3C5F6 /* Pods-ZYJModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYJModel.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYJModel/Pods-ZYJModel.release.xcconfig"; sourceTree = "<group>"; };
+		D92EAC861D1045B400BE6E8B /* ZYJFMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYJFMDB.swift; sourceTree = "<group>"; };
+		D95370041D1034570020F5EE /* ZYJModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYJModel.swift; sourceTree = "<group>"; };
+		D9C6618B1D159E3F002E87EC /* ZYJModel+CreateTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ZYJModel+CreateTable.swift"; sourceTree = "<group>"; };
+		D9C6618D1D15CBBA002E87EC /* ZYJModel+Select.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ZYJModel+Select.swift"; sourceTree = "<group>"; };
+		DC29CA0D1D100E77003BC277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC29CA0F1D100E77003BC277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC29CA2E1D101351003BC277 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		DC3059FD1D0FE57100E7C3B6 /* ZYJModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYJModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC305A001D0FE57100E7C3B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC305A021D0FE57100E7C3B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC305A071D0FE57100E7C3B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC305A0C1D0FE57100E7C3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC305A141D0FE6C000E7C3B6 /* ZYJModel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZYJModel-Bridging-Header.h"; sourceTree = "<group>"; };
+		DC305A151D0FE6C000E7C3B6 /* ZYJManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYJManager.h; sourceTree = "<group>"; };
+		DC305A161D0FE6C000E7C3B6 /* ZYJManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYJManager.m; sourceTree = "<group>"; };
+		DC305A191D0FE73A00E7C3B6 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		DC305A1B1D0FE8C000E7C3B6 /* ZYJIvar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYJIvar.swift; sourceTree = "<group>"; };
+		DC6AD9611D11241F002824F7 /* ZYJModel+Insert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ZYJModel+Insert.swift"; sourceTree = "<group>"; };
+		DC6AD9631D112820002824F7 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		DC6AD9661D112BB6002824F7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		DC6AD9671D112BB6002824F7 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		DC6AD9681D112BB6002824F7 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		DC6AD9691D112BB6002824F7 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		DC6AD96A1D112BB6002824F7 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		DC6AD96B1D112BB6002824F7 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		DC6AD96C1D112BB6002824F7 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		DC6AD96D1D112BB6002824F7 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		DC6AD96E1D112BB6002824F7 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		DC6AD96F1D112BB6002824F7 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		DC6AD9701D112BB6002824F7 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		DC6AD9761D1136E6002824F7 /* ZYJModel+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ZYJModel+Common.swift"; sourceTree = "<group>"; };
+		DC6AD9781D113C03002824F7 /* NSObject+NSArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+NSArray.swift"; sourceTree = "<group>"; };
+		DC6AD97D1D11429F002824F7 /* NSObject+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+JSON.swift"; sourceTree = "<group>"; };
+		DC6AD9801D114590002824F7 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		DC6AD9811D114590002824F7 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		DC6AD9821D114590002824F7 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		DC6AD9831D114590002824F7 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		DC6AD9841D114590002824F7 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		DC6AD9881D114653002824F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6AD9891D114653002824F7 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		DC6AD98A1D114653002824F7 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		DC6AD98B1D114653002824F7 /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		DC6AD98C1D114653002824F7 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		DC6AD98D1D114653002824F7 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		DC6AD98E1D114653002824F7 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		DC6AD98F1D114653002824F7 /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		DC6AD9901D114653002824F7 /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		DC6AD9911D114653002824F7 /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		DC6AD9921D114653002824F7 /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		DC6AD9931D114653002824F7 /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		DC6AD9941D114653002824F7 /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		DC6AD9951D114653002824F7 /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		DC6AD9961D114653002824F7 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		DC6AD9971D114653002824F7 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		DC6AD9981D114653002824F7 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		DC6AD9991D114653002824F7 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		DC6AD99A1D114653002824F7 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		DC6AD99B1D114653002824F7 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		DC6AD99C1D114653002824F7 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		DC6AD99D1D114653002824F7 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC3059FA1D0FE57100E7C3B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC29CA2F1D101351003BC277 /* libsqlite3.0.tbd in Frameworks */,
+				470DBDE891670D4D633535B9 /* Pods_ZYJModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80292FCAB9C28FCD302134A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				155A005D913822994606B67E /* Pods-ZYJModel.debug.xcconfig */,
+				694665BC9339B4F7BAD3C5F6 /* Pods-ZYJModel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4747665D34CE785AEDBB27F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC29CA2E1D101351003BC277 /* libsqlite3.0.tbd */,
+				55053BC1EE5CC0AA1DAA7D2F /* Pods_ZYJModel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D92EAC851D1045A300BE6E8B /* FMDBHelper */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AD9651D112BB6002824F7 /* fmdb */,
+				D92EAC861D1045B400BE6E8B /* ZYJFMDB.swift */,
+			);
+			path = FMDBHelper;
+			sourceTree = "<group>";
+		};
+		DC3059F41D0FE57100E7C3B6 = {
+			isa = PBXGroup;
+			children = (
+				DC3059FF1D0FE57100E7C3B6 /* ZYJModel */,
+				DC3059FE1D0FE57100E7C3B6 /* Products */,
+				80292FCAB9C28FCD302134A6 /* Pods */,
+				C4747665D34CE785AEDBB27F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DC3059FE1D0FE57100E7C3B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC3059FD1D0FE57100E7C3B6 /* ZYJModel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC3059FF1D0FE57100E7C3B6 /* ZYJModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC305A181D0FE72400E7C3B6 /* ZYJModel */,
+				DC305A001D0FE57100E7C3B6 /* AppDelegate.swift */,
+				DC305A021D0FE57100E7C3B6 /* ViewController.swift */,
+				DC29CA0C1D100E77003BC277 /* LaunchScreen.storyboard */,
+				DC29CA0E1D100E77003BC277 /* Main.storyboard */,
+				DC305A071D0FE57100E7C3B6 /* Assets.xcassets */,
+				DC305A0C1D0FE57100E7C3B6 /* Info.plist */,
+				DC305A151D0FE6C000E7C3B6 /* ZYJManager.h */,
+				DC305A161D0FE6C000E7C3B6 /* ZYJManager.m */,
+				DC305A141D0FE6C000E7C3B6 /* ZYJModel-Bridging-Header.h */,
+				DC6AD9631D112820002824F7 /* TestModel.swift */,
+			);
+			path = ZYJModel;
+			sourceTree = "<group>";
+		};
+		DC305A181D0FE72400E7C3B6 /* ZYJModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AD9871D114653002824F7 /* MJExtension */,
+				DC6AD97F1D114590002824F7 /* YYModel */,
+				D92EAC851D1045A300BE6E8B /* FMDBHelper */,
+				DC305A191D0FE73A00E7C3B6 /* NSObject+Extension.swift */,
+				DC305A1B1D0FE8C000E7C3B6 /* ZYJIvar.swift */,
+				D95370041D1034570020F5EE /* ZYJModel.swift */,
+				DC6AD9601D112407002824F7 /* Extension */,
+			);
+			path = ZYJModel;
+			sourceTree = "<group>";
+		};
+		DC6AD9601D112407002824F7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AD9611D11241F002824F7 /* ZYJModel+Insert.swift */,
+				D9C6618D1D15CBBA002E87EC /* ZYJModel+Select.swift */,
+				DC6AD9761D1136E6002824F7 /* ZYJModel+Common.swift */,
+				DC6AD9781D113C03002824F7 /* NSObject+NSArray.swift */,
+				DC6AD97D1D11429F002824F7 /* NSObject+JSON.swift */,
+				D9C6618B1D159E3F002E87EC /* ZYJModel+CreateTable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DC6AD9651D112BB6002824F7 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AD9661D112BB6002824F7 /* FMDatabase.h */,
+				DC6AD9671D112BB6002824F7 /* FMDatabase.m */,
+				DC6AD9681D112BB6002824F7 /* FMDatabaseAdditions.h */,
+				DC6AD9691D112BB6002824F7 /* FMDatabaseAdditions.m */,
+				DC6AD96A1D112BB6002824F7 /* FMDatabasePool.h */,
+				DC6AD96B1D112BB6002824F7 /* FMDatabasePool.m */,
+				DC6AD96C1D112BB6002824F7 /* FMDatabaseQueue.h */,
+				DC6AD96D1D112BB6002824F7 /* FMDatabaseQueue.m */,
+				DC6AD96E1D112BB6002824F7 /* FMDB.h */,
+				DC6AD96F1D112BB6002824F7 /* FMResultSet.h */,
+				DC6AD9701D112BB6002824F7 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		DC6AD97F1D114590002824F7 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AD9801D114590002824F7 /* NSObject+YYModel.h */,
+				DC6AD9811D114590002824F7 /* NSObject+YYModel.m */,
+				DC6AD9821D114590002824F7 /* YYClassInfo.h */,
+				DC6AD9831D114590002824F7 /* YYClassInfo.m */,
+				DC6AD9841D114590002824F7 /* YYModel.h */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
+		DC6AD9871D114653002824F7 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AD9881D114653002824F7 /* Info.plist */,
+				DC6AD9891D114653002824F7 /* MJExtension.h */,
+				DC6AD98A1D114653002824F7 /* MJExtensionConst.h */,
+				DC6AD98B1D114653002824F7 /* MJExtensionConst.m */,
+				DC6AD98C1D114653002824F7 /* MJFoundation.h */,
+				DC6AD98D1D114653002824F7 /* MJFoundation.m */,
+				DC6AD98E1D114653002824F7 /* MJProperty.h */,
+				DC6AD98F1D114653002824F7 /* MJProperty.m */,
+				DC6AD9901D114653002824F7 /* MJPropertyKey.h */,
+				DC6AD9911D114653002824F7 /* MJPropertyKey.m */,
+				DC6AD9921D114653002824F7 /* MJPropertyType.h */,
+				DC6AD9931D114653002824F7 /* MJPropertyType.m */,
+				DC6AD9941D114653002824F7 /* NSObject+MJClass.h */,
+				DC6AD9951D114653002824F7 /* NSObject+MJClass.m */,
+				DC6AD9961D114653002824F7 /* NSObject+MJCoding.h */,
+				DC6AD9971D114653002824F7 /* NSObject+MJCoding.m */,
+				DC6AD9981D114653002824F7 /* NSObject+MJKeyValue.h */,
+				DC6AD9991D114653002824F7 /* NSObject+MJKeyValue.m */,
+				DC6AD99A1D114653002824F7 /* NSObject+MJProperty.h */,
+				DC6AD99B1D114653002824F7 /* NSObject+MJProperty.m */,
+				DC6AD99C1D114653002824F7 /* NSString+MJExtension.h */,
+				DC6AD99D1D114653002824F7 /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC3059FC1D0FE57100E7C3B6 /* ZYJModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC305A0F1D0FE57100E7C3B6 /* Build configuration list for PBXNativeTarget "ZYJModel" */;
+			buildPhases = (
+				ED169AB0333664319F4CEC29 /* 📦 Check Pods Manifest.lock */,
+				086EEC41F872E1A1C6C28D08 /* [CP] Check Pods Manifest.lock */,
+				902D42812883CBE86E244E01 /* [CP] Check Pods Manifest.lock */,
+				DC3059F91D0FE57100E7C3B6 /* Sources */,
+				DC3059FA1D0FE57100E7C3B6 /* Frameworks */,
+				DC3059FB1D0FE57100E7C3B6 /* Resources */,
+				E04C2A738E04F66D08E48216 /* [CP] Embed Pods Frameworks */,
+				82704EE80CC3CC65A45A1445 /* [CP] Copy Pods Resources */,
+				98BE6FE81B1C40A79F5CB759 /* 📦 Embed Pods Frameworks */,
+				59F5514AE1984EDC6DBCF761 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYJModel;
+			productName = ZYJModel;
+			productReference = DC3059FD1D0FE57100E7C3B6 /* ZYJModel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC3059F51D0FE57100E7C3B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "张亚举";
+				TargetAttributes = {
+					DC3059FC1D0FE57100E7C3B6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RJAV85CYF6;
+						DevelopmentTeamName = "AlsFox Century International Forwarding Co.,Ltd.";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DC3059F81D0FE57100E7C3B6 /* Build configuration list for PBXProject "ZYJModel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC3059F41D0FE57100E7C3B6;
+			productRefGroup = DC3059FE1D0FE57100E7C3B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC3059FC1D0FE57100E7C3B6 /* ZYJModel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC3059FB1D0FE57100E7C3B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6AD99E1D114653002824F7 /* Info.plist in Resources */,
+				DC29CA111D100E77003BC277 /* Main.storyboard in Resources */,
+				DC305A081D0FE57100E7C3B6 /* Assets.xcassets in Resources */,
+				DC29CA101D100E77003BC277 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		086EEC41F872E1A1C6C28D08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59F5514AE1984EDC6DBCF761 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYJModel/Pods-ZYJModel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82704EE80CC3CC65A45A1445 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYJModel/Pods-ZYJModel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		902D42812883CBE86E244E01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98BE6FE81B1C40A79F5CB759 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYJModel/Pods-ZYJModel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E04C2A738E04F66D08E48216 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYJModel/Pods-ZYJModel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED169AB0333664319F4CEC29 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC3059F91D0FE57100E7C3B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC305A1A1D0FE73A00E7C3B6 /* NSObject+Extension.swift in Sources */,
+				DC6AD9731D112BB6002824F7 /* FMDatabasePool.m in Sources */,
+				DC6AD9751D112BB6002824F7 /* FMResultSet.m in Sources */,
+				DC6AD9771D1136E6002824F7 /* ZYJModel+Common.swift in Sources */,
+				DC6AD9791D113C03002824F7 /* NSObject+NSArray.swift in Sources */,
+				D95370051D1034570020F5EE /* ZYJModel.swift in Sources */,
+				D9C6618C1D159E3F002E87EC /* ZYJModel+CreateTable.swift in Sources */,
+				DC305A031D0FE57100E7C3B6 /* ViewController.swift in Sources */,
+				DC6AD9A21D114653002824F7 /* MJPropertyKey.m in Sources */,
+				DC6AD9741D112BB6002824F7 /* FMDatabaseQueue.m in Sources */,
+				DC6AD9A31D114653002824F7 /* MJPropertyType.m in Sources */,
+				DC6AD9711D112BB6002824F7 /* FMDatabase.m in Sources */,
+				DC6AD9851D114590002824F7 /* NSObject+YYModel.m in Sources */,
+				DC305A011D0FE57100E7C3B6 /* AppDelegate.swift in Sources */,
+				DC6AD9A61D114653002824F7 /* NSObject+MJKeyValue.m in Sources */,
+				DC305A171D0FE6C000E7C3B6 /* ZYJManager.m in Sources */,
+				DC6AD9641D112820002824F7 /* TestModel.swift in Sources */,
+				DC6AD9A81D114653002824F7 /* NSString+MJExtension.m in Sources */,
+				DC6AD9861D114590002824F7 /* YYClassInfo.m in Sources */,
+				DC6AD9721D112BB6002824F7 /* FMDatabaseAdditions.m in Sources */,
+				D9C6618E1D15CBBA002E87EC /* ZYJModel+Select.swift in Sources */,
+				DC6AD9A01D114653002824F7 /* MJFoundation.m in Sources */,
+				DC305A1C1D0FE8C000E7C3B6 /* ZYJIvar.swift in Sources */,
+				DC6AD99F1D114653002824F7 /* MJExtensionConst.m in Sources */,
+				DC6AD9A51D114653002824F7 /* NSObject+MJCoding.m in Sources */,
+				D92EAC871D1045B400BE6E8B /* ZYJFMDB.swift in Sources */,
+				DC6AD9A71D114653002824F7 /* NSObject+MJProperty.m in Sources */,
+				DC6AD97E1D11429F002824F7 /* NSObject+JSON.swift in Sources */,
+				DC6AD9621D11241F002824F7 /* ZYJModel+Insert.swift in Sources */,
+				DC6AD9A41D114653002824F7 /* NSObject+MJClass.m in Sources */,
+				DC6AD9A11D114653002824F7 /* MJProperty.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC29CA0C1D100E77003BC277 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC29CA0D1D100E77003BC277 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DC29CA0E1D100E77003BC277 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC29CA0F1D100E77003BC277 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC305A0D1D0FE57100E7C3B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC305A0E1D0FE57100E7C3B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC305A101D0FE57100E7C3B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 155A005D913822994606B67E /* Pods-ZYJModel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ZYJModel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsfox.ZYJModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZYJModel/ZYJModel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DC305A111D0FE57100E7C3B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 694665BC9339B4F7BAD3C5F6 /* Pods-ZYJModel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ZYJModel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsfox.ZYJModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZYJModel/ZYJModel-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC3059F81D0FE57100E7C3B6 /* Build configuration list for PBXProject "ZYJModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC305A0D1D0FE57100E7C3B6 /* Debug */,
+				DC305A0E1D0FE57100E7C3B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC305A0F1D0FE57100E7C3B6 /* Build configuration list for PBXNativeTarget "ZYJModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC305A101D0FE57100E7C3B6 /* Debug */,
+				DC305A111D0FE57100E7C3B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC3059F51D0FE57100E7C3B6 /* Project object */;
+}
