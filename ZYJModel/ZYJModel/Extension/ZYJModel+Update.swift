@@ -54,9 +54,13 @@ extension ZYJModel {
             
             if let valueArr = proprety.arrValue {
                 
+                valueArr.zyj_deleteAction(superId: self.zyj_replaceHostId(), superProName: "\(self.classForCoder)", superName: ivar.ivarName, deleteBlock: {
+                    
+                })
+                valueArr.zyj_inserts(superId: self.zyj_replaceHostId(), superProName: "\(self.classForCoder)", superName: ivar.ivarName, block: { 
+                    
+                })
                 
-                
-                valueArr.zyj_updateArrKeyValue(superHostID: self.zyj_replaceHostId(), superName: "\(self.classForCoder)", superProName: ivar.ivarName)
                 proprety.value = ""
                 
                 

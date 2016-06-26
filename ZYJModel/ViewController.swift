@@ -67,10 +67,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
-        
-       
-//        dfk.twoModel?.name = "李虹晓1"
+
         
         dfk.zyj_update { (res) in
             
