@@ -50,7 +50,7 @@ class ViewController: UIViewController {
             print("\(res)")
         }
         
-        TestModel.select(wheres: nil) { (results) in
+        TestModel.zyj_select(wheres: nil) { (results) in
             
         }
         

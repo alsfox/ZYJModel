@@ -28,6 +28,10 @@ extension ZYJModel {
                 let sql = "UPDATE \(self.classForCoder) SET \(modelSql)  WHERE zyj_hostId = \(self.zyj_replaceHostId()) \(superHostId)  \(superName) \(superProName) ;"
                 
                 
+                self.dynamicType.zyj_select(wheres: nil, results: { (results) in
+                    HHLog("\(results)")
+                })
+                
                 HHLog("\(sql)");
                 let insertRes = ZYJFMDB.executeUpdate(sql)
                 
@@ -49,6 +53,8 @@ extension ZYJModel {
             
             
             if let valueArr = proprety.arrValue {
+                
+                
                 
                 valueArr.zyj_updateArrKeyValue(superHostID: self.zyj_replaceHostId(), superName: "\(self.classForCoder)", superProName: ivar.ivarName)
                 proprety.value = ""

@@ -11,7 +11,7 @@ import UIKit
 extension ZYJModel {
     
     /// 主查语句
-    static func select(wheres: String?,groupBy: String? = nil, orderBy : String? = nil, limit: String? = nil, results: (results: NSArray)->()) -> Void {
+    static func zyj_select(wheres: String?,groupBy: String? = nil, orderBy : String? = nil, limit: String? = nil, results: (results: NSArray)->()) -> Void {
         
         
             // 主要的数组
@@ -93,7 +93,7 @@ extension ZYJModel {
                                     
                                     let zyjm = valueClass1 as! ZYJModel.Type
                                     
-                                    zyjm.select(wheres: whereSql, groupBy: nil, orderBy: nil, limit: "1", results: { (results) in
+                                    zyjm.zyj_select(wheres: whereSql, groupBy: nil, orderBy: nil, limit: "1", results: { (results) in
                                         if results.count > 0 {
                                             swiftModel.setValue(results[0], forKey: ivar1.ivarName)
                                         }
@@ -108,7 +108,7 @@ extension ZYJModel {
                                     let sqlWhere = "zyj_superName = '\(swiftModel.classForCoder)' AND zyj_superHostId = \(swiftModel.zyj_replaceHostId()) AND zyj_superPerNmae = '\(ivar1.ivarName)'"
                                     
                                     if let cls = dict as? ZYJModel.Type {
-                                        cls.select(wheres: sqlWhere, results: { (results) in
+                                        cls.zyj_select(wheres: sqlWhere, results: { (results) in
                                             if results.count > 0 {
                                                 swiftModel.setValue(results, forKey: ivar1.ivarName);
                                             } 
@@ -125,7 +125,7 @@ extension ZYJModel {
     
     static func zyj_find(hostId: Int, result: (result:ZYJModel?) -> Void) {
     
-        self.select(wheres: "zyj_hostId = \(hostId)") { (results) in
+        self.zyj_select(wheres: "zyj_hostId = \(hostId)") { (results) in
             
             if results.count > 0 {
                 result(result: results[0] as? ZYJModel);
