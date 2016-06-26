@@ -24,7 +24,7 @@ extension ZYJModel {
             resBlock(res: false)
         }
         
-        if self.zyj_hostId == 0 {
+        if self.zyj_replaceHostId() == 0 {
             HHLog("警告：无 zyj_hostId的数据插入")
         }
         let modelSql = self.zyj_modelSqlNameAndValue { (res) in
@@ -34,9 +34,7 @@ extension ZYJModel {
         let sql = "INSERT INTO \(self.classForCoder) (\(modelSql.names)) VALUES (\(modelSql.values));"
         
         HHLog( "\(sql)")
-        let property = self.propertyForArray()
-        
-        
+                
         let insertRes = ZYJFMDB.executeUpdate(sql)
         
         resBlock(res: insertRes);

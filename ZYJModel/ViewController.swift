@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         dfk.twoModel = twoModel
         
-//        dfk.modelArr = [twoModel1,  twoModel2, twoModel3];
+        dfk.modelArr = [twoModel1,  twoModel2, twoModel3];
         
         dfk.arr = ["sdfsd",
                    
@@ -51,15 +51,16 @@ class ViewController: UIViewController {
         }
         
         TestModel.select(wheres: nil) { (results) in
-            if results.count > 0 {
-                let test = results[0] as! TestModel
-                print("\(test.name)\(test.twoModel?.name) \(test.modelArr)")
-            }
+            
         }
         
-        TestModel.find(hostId: 1) { (result) in
-            let test = result as! TestModel
+        
+        dfk.name = "李虹晓"
+        
+        dfk.zyj_update { (res) in
+            
         }
+        
         
         
         

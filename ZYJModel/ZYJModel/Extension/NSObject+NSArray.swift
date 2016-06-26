@@ -68,8 +68,35 @@ extension NSArray {
             }
             
         }
-        
         block()
+    }
+    
+    
+    internal func zyj_deleteAction(superId: Int, superProName: String, superName: String, deleteBlock: ()->()){
+        for item in self {
+            if let model = item as? ZYJModel {
+                
+                model.zyj_superName = superName;
+                model.zyj_superHostId = superId;
+                model.zyj_superPerNmae = superProName
+                
+                model.zyj_delete(resBlock: { (res) in
+                    
+                })
+            }
+        }
+        deleteBlock()
+    }
+    
+    internal func zyj_delete(deleteBlock: ()->()) {
+        for item in self {
+            if let model = item as? ZYJModel {
+                model.zyj_delete(resBlock: { (res) in
+                    
+                })
+            }
+        }
+        deleteBlock()
     }
     
 }

@@ -44,6 +44,8 @@
 		DC6AD9A61D114653002824F7 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD9991D114653002824F7 /* NSObject+MJKeyValue.m */; };
 		DC6AD9A71D114653002824F7 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD99B1D114653002824F7 /* NSObject+MJProperty.m */; };
 		DC6AD9A81D114653002824F7 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AD99D1D114653002824F7 /* NSString+MJExtension.m */; };
+		DCDCE5751D1D0F640009BCD3 /* ZYJModel+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCE5741D1D0F640009BCD3 /* ZYJModel+Delete.swift */; };
+		DCDCE5771D1D1BEC0009BCD3 /* ZYJModel+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCE5761D1D1BEC0009BCD3 /* ZYJModel+Update.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +112,8 @@
 		DC6AD99B1D114653002824F7 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		DC6AD99C1D114653002824F7 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		DC6AD99D1D114653002824F7 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		DCDCE5741D1D0F640009BCD3 /* ZYJModel+Delete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ZYJModel+Delete.swift"; sourceTree = "<group>"; };
+		DCDCE5761D1D1BEC0009BCD3 /* ZYJModel+Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ZYJModel+Update.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,8 +209,10 @@
 		DC6AD9601D112407002824F7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DCDCE5761D1D1BEC0009BCD3 /* ZYJModel+Update.swift */,
 				DC6AD9611D11241F002824F7 /* ZYJModel+Insert.swift */,
 				D9C6618D1D15CBBA002E87EC /* ZYJModel+Select.swift */,
+				DCDCE5741D1D0F640009BCD3 /* ZYJModel+Delete.swift */,
 				DC6AD9761D1136E6002824F7 /* ZYJModel+Common.swift */,
 				DC6AD9781D113C03002824F7 /* NSObject+NSArray.swift */,
 				DC6AD97D1D11429F002824F7 /* NSObject+JSON.swift */,
@@ -473,6 +479,7 @@
 				D95370051D1034570020F5EE /* ZYJModel.swift in Sources */,
 				D9C6618C1D159E3F002E87EC /* ZYJModel+CreateTable.swift in Sources */,
 				DC305A031D0FE57100E7C3B6 /* ViewController.swift in Sources */,
+				DCDCE5771D1D1BEC0009BCD3 /* ZYJModel+Update.swift in Sources */,
 				DC6AD9A21D114653002824F7 /* MJPropertyKey.m in Sources */,
 				DC6AD9741D112BB6002824F7 /* FMDatabaseQueue.m in Sources */,
 				DC6AD9A31D114653002824F7 /* MJPropertyType.m in Sources */,
@@ -493,6 +500,7 @@
 				D92EAC871D1045B400BE6E8B /* ZYJFMDB.swift in Sources */,
 				DC6AD9A71D114653002824F7 /* NSObject+MJProperty.m in Sources */,
 				DC6AD97E1D11429F002824F7 /* NSObject+JSON.swift in Sources */,
+				DCDCE5751D1D0F640009BCD3 /* ZYJModel+Delete.swift in Sources */,
 				DC6AD9621D11241F002824F7 /* ZYJModel+Insert.swift in Sources */,
 				DC6AD9A41D114653002824F7 /* NSObject+MJClass.m in Sources */,
 				DC6AD9A11D114653002824F7 /* MJProperty.m in Sources */,

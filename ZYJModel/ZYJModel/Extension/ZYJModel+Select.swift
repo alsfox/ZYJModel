@@ -85,7 +85,7 @@ extension ZYJModel {
                                                         
                             if ivar1.ivarSqlType == ZYJSqlType.EmptyString {
                                 
-                                let whereSql = "zyj_superName = '\(swiftModel.classForCoder)' AND zyj_superHostId = \(swiftModel.zyj_hostId) AND zyj_superPerNmae = '\(ivar1.ivarName)'"
+                                let whereSql = "zyj_superName = '\(swiftModel.classForCoder)' AND zyj_superHostId = \(swiftModel.zyj_replaceHostId()) AND zyj_superPerNmae = '\(ivar1.ivarName)'"
                                 
                                 let bunle = Bundle.main().objectForInfoDictionaryKey("CFBundleName")
                                 // 得到类
@@ -105,7 +105,7 @@ extension ZYJModel {
                                 
                                 if !NSObject.isBaseTypeInNSArray(dict) {
                                     // swift 模型数组
-                                    let sqlWhere = "zyj_superName = '\(swiftModel.classForCoder)' AND zyj_superHostId = \(swiftModel.zyj_hostId) AND zyj_superPerNmae = '\(ivar1.ivarName)'"
+                                    let sqlWhere = "zyj_superName = '\(swiftModel.classForCoder)' AND zyj_superHostId = \(swiftModel.zyj_replaceHostId()) AND zyj_superPerNmae = '\(ivar1.ivarName)'"
                                     
                                     if let cls = dict as? ZYJModel.Type {
                                         cls.select(wheres: sqlWhere, results: { (results) in
@@ -123,14 +123,14 @@ extension ZYJModel {
             results(results: mutArr)
         }
     
-    static func find(hostId: Int, result: (result:ZYJModel?) -> Void) {
+    static func zyj_find(hostId: Int, result: (result:ZYJModel?) -> Void) {
     
         self.select(wheres: "zyj_hostId = \(hostId)") { (results) in
             
             if results.count > 0 {
-                
                 result(result: results[0] as? ZYJModel);
-                
+            } else {
+                result(result: nil)
             }
             
         }

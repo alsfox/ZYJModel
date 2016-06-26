@@ -15,10 +15,6 @@ public let superName = "zyj_superName"
 public let superPerNmae = "zyj_superPerNmae"
 public let superHostId = "zyj_superHostId"
 
-
-
-
-
 class ZYJModel: NSObject {
     /// 类主键
     var zyj_hostId : Int = 0
@@ -50,7 +46,8 @@ class ZYJModel: NSObject {
     
     
     
-    internal func zyj_replaceHostId() -> String? {
-        return nil;
+    internal func zyj_replaceHostId() -> Int {
+        
+        return zyj_hostId;
     }
 }

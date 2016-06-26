@@ -66,8 +66,6 @@ extension ZYJModel {
             
             let sql_addM = "ALTER TABLE '\(modelName)' ADD COLUMN '\(ivar.ivarName)' \(ivar.ivarSqlType.rawValue)"
             
-            
-            
             let addRes = ZYJFMDB.executeUpdate(sql_addM)
             
             if addRes {
@@ -77,7 +75,68 @@ extension ZYJModel {
             }
         }
     }
-    
+    func zyj_modelKeyValue(ivar: ZYJIvar) -> (nsme: String, value: AnyObject, value: AnyClass?) {
+        
+        var name = ""
+        
+        // 取出 Model 里的数据
+        var ivarValue = self.value(forKey: ivar.ivarName);
+        
+        /// 不是数组类型的时候
+        if !(ivar.ivarSqlType == ZYJSqlType.EmptyString) {
+            name = "'\(ivar.ivarName)'"
+            
+            // 判断是不是 字符
+            if ivar.isString {
+                
+                if let value1 = ivarValue as? String {
+                    ivarValue = "'\(value1)'"
+                } else {
+                    ivarValue = "''"
+                }
+            } else if ivar.isData {
+                if ivarValue != nil {
+                    
+                    let dataStr = (ivarValue as! NSData).base64EncodedString(NSData.Base64EncodingOptions.encoding64CharacterLineLength)
+                    
+                    ivarValue = "'\(dataStr)'"
+                } else {
+                    ivarValue = "''"
+                }
+            } else if ivar.isArr {
+                
+                let dict = self.propertyForArray()?.object(forKey: ivar.ivarName)
+                
+                
+              
+                if NSObject.isBaseTypeInNSArray(dict) {
+                    
+                    if let va = (ivarValue as? NSArray)?.toString() {
+                        ivarValue = "'\(va)'";
+                    } else {
+                        ivarValue = "''"
+                    }
+                } else {
+                    ivarValue = "''"
+                }
+            }
+            
+        } else {
+            
+            name = "'\(ivar.ivarName)'";
+            
+            var typeStr = "\(ivar.ivarType!)"
+            
+            typeStr = typeStr.replacingOccurrences(of: "Optional<", with: "")
+            typeStr = typeStr.replacingOccurrences(of: ">", with: "")
+            
+            ivarValue = "'\(typeStr)'"
+            
+        }
+        
+        
+        return (name, ivarValue!, ivarValue?.classForCoder)
+    }
     /// 得到类的 names 和 values 用于 数据库操作
     func zyj_modelSqlNameAndValue(resBlock: (res: Bool) -> ()) -> (names:String, values:String) {
         var names = String()
@@ -87,7 +146,7 @@ extension ZYJModel {
         self.enumratePer { (ivar) in
             // 取出 Model 里的数据
             var ivarValue = self.value(forKey: ivar.ivarName);
-                        
+            
             /// 不是数组类型的时候
             if !(ivar.ivarSqlType == ZYJSqlType.EmptyString) {
                 names.append("'\(ivar.ivarName)',");
@@ -128,7 +187,7 @@ extension ZYJModel {
                         let modelArr = self.value(forKey: ivar.ivarName);
                         
                         if let letArr = modelArr as? NSArray {
-                            letArr.zyj_inserts(superId: self.zyj_hostId, superProName: ivar.ivarName, superName: "\(self.classForCoder)", block: { 
+                            letArr.zyj_inserts(superId: self.zyj_replaceHostId(), superProName: ivar.ivarName, superName: "\(self.classForCoder)", block: {
                                 resBlock(res: true)
                             })
                             
@@ -161,7 +220,7 @@ extension ZYJModel {
                 if ivarValue != nil {
                     let valueModel = ivarValue as! ZYJModel
                     valueModel.setValue("\(self.classForCoder)", forKey: superName)
-                    valueModel.setValue(self.zyj_hostId, forKey: superHostId)
+                    valueModel.setValue(self.zyj_replaceHostId(), forKey: superHostId)
                     valueModel.setValue(ivar.ivarName, forKey: superPerNmae);
                     
                     valueModel.zyj_insert(resBlock: { (res) in
@@ -175,6 +234,18 @@ extension ZYJModel {
         let nameSub = (names as NSString).substring(to: (names as NSString).length - 1);
         let valuesSub = (values as NSString).substring(to: (values as NSString).length - 1);
         return (nameSub, valuesSub)
+    }
+    
+    func zyj_updateKeyValue() -> String {
+        var names = String()
+        
+        self.enumratePer { (ivar) in
+            let proprety = self.zyj_modelKeyValue(ivar: ivar as ZYJIvar)
+            
+            names.append(" \(proprety.nsme) = \(proprety.value),")
+        }
+        
+        return (names as NSString).substring(to: (names as NSString).length - 1);
     }
 
 }
