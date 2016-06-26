@@ -75,9 +75,12 @@ extension ZYJModel {
             }
         }
     }
-    func zyj_modelKeyValue(ivar: ZYJIvar) -> (nsme: String, value: AnyObject, value: AnyClass?) {
+    func zyj_modelKeyValue(ivar: ZYJIvar) -> (nsme: String, value: AnyObject, arrValue: NSArray?) {
         
         var name = ""
+        
+        var valueArr : NSArray?
+        
         
         // 取出 Model 里的数据
         var ivarValue = self.value(forKey: ivar.ivarName);
@@ -117,7 +120,11 @@ extension ZYJModel {
                         ivarValue = "''"
                     }
                 } else {
-                    ivarValue = "''"
+                    // ZYJModel 数组
+                    if let arrVaas = ivarValue as? NSArray {
+                        valueArr = arrVaas;
+                    }
+                    
                 }
             }
             
@@ -135,7 +142,7 @@ extension ZYJModel {
         }
         
         
-        return (name, ivarValue!, ivarValue?.classForCoder)
+        return (name, ivarValue!,valueArr)
     }
     /// 得到类的 names 和 values 用于 数据库操作
     func zyj_modelSqlNameAndValue(resBlock: (res: Bool) -> ()) -> (names:String, values:String) {
@@ -236,17 +243,9 @@ extension ZYJModel {
         return (nameSub, valuesSub)
     }
     
-    func zyj_updateKeyValue() -> String {
-        var names = String()
+    
         
-        self.enumratePer { (ivar) in
-            let proprety = self.zyj_modelKeyValue(ivar: ivar as ZYJIvar)
-            
-            names.append(" \(proprety.nsme) = \(proprety.value),")
-        }
-        
-        return (names as NSString).substring(to: (names as NSString).length - 1);
-    }
+    
 
 }
 

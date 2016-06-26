@@ -57,11 +57,35 @@ class ViewController: UIViewController {
         
         dfk.name = "李虹晓"
         
+        
+        dfk.twoModel?.name = "李虹晓1"
+        
+        if dfk.modelArr != nil {
+            for model in dfk.modelArr! {
+                if let m1 = model as? TwoModel {
+                    m1.name = "李虹晓1"
+                }
+            }
+        }
+        
+        
+       
+//        dfk.twoModel?.name = "李虹晓1"
+        
         dfk.zyj_update { (res) in
+            
+            HHLog("----");
             
         }
         
         
+        let save = TestModel()
+        
+        save.zyj_hostId = 1;
+        
+        save.save { (res) in
+            
+        }
         
         
         

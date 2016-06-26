@@ -33,13 +33,13 @@ extension NSArray {
             }
         })
         let strReslut = strM as NSString
-        
-        
-        return  strReslut.substring(to: strReslut.length - 1)
-        
-        
+        if strReslut.length > 0 {
+            return  strReslut.substring(to: strReslut.length - 1)
+        } else {
+            return ""
+        }
     }
-    
+    /// 增加单个 数据
     internal func zyj_inserts(block:()->()) {
         for item in self {
             
@@ -52,7 +52,7 @@ extension NSArray {
         }
         block()
     }
-    
+    /// 数组中的增加
     internal func zyj_inserts(superId: Int, superProName: String, superName: String, block: () -> ()) -> Void {
         for item in self {
             
@@ -71,7 +71,7 @@ extension NSArray {
         block()
     }
     
-    
+    /// 数组中的删除
     internal func zyj_deleteAction(superId: Int, superProName: String, superName: String, deleteBlock: ()->()){
         for item in self {
             if let model = item as? ZYJModel {
@@ -88,6 +88,7 @@ extension NSArray {
         deleteBlock()
     }
     
+    /// 删除单个数据
     internal func zyj_delete(deleteBlock: ()->()) {
         for item in self {
             if let model = item as? ZYJModel {
@@ -97,6 +98,31 @@ extension NSArray {
             }
         }
         deleteBlock()
+    }
+    // 单个数据更新
+    internal func zyj_update(updateBlock : () -> ()) {
+        for item in self {
+            if let model = item as? ZYJModel {
+                model.zyj_update(resBlock: { (res) in
+                    
+                })
+            }
+        }
+    }
+    
+    /// 数组数据更新
+    internal func zyj_updateArrKeyValue(superHostID: Int, superName: String, superProName: String)  {
+        for item in self {
+            if let model = item as? ZYJModel {
+                model.zyj_superHostId = superHostID
+                model.zyj_superName = superName
+                model.zyj_superPerNmae = superProName
+                
+                model.zyj_update(resBlock: { (res) in
+                    
+                })
+            }
+        }
     }
     
 }
